@@ -6,7 +6,7 @@ Uma aplicação web moderna para criar roteiros com múltiplos atores e vozes. P
 
 ## 🎬 Demo
 
-![Demo](/demo/demo.mp4)
+![Demo](/demo/demo.mov)
 
 ## ✨ Funcionalidades
 
