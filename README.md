@@ -6,11 +6,7 @@ Uma aplicação web moderna para criar roteiros com múltiplos atores e vozes. P
 
 ## 🎬 Demo
 
-Veja a aplicação em funcionamento:
-
-<div>
-  <iframe width="640" height="360" src="https://www.loom.com/embed/f0e387f489e34026bd741e4e3e787223?sid=9a0d5c59-52c1-4664-ac27-56e386502d11" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</div>
+![Demo](/demo/demo.mp4)
 
 ## ✨ Funcionalidades
 
