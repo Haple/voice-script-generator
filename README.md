@@ -6,7 +6,7 @@ Uma aplicação web moderna para criar roteiros com múltiplos atores e vozes. P
 
 ## 🎬 Demo
 
-![Demo](https://github.com/Haple/voice-script-generator/blob/main/demo/demo.mov)
+![Demo](https://github.com/Haple/voice-script-generator/blob/main/demo/demo.mp4)
 
 ## ✨ Funcionalidades
 
