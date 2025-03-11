@@ -1,7 +1,6 @@
+# COPY THIS PROJECT 💙
 
 # 🎭 Voice Script Generator
-
-![Script Generator Banner](https://i.imgur.com/nReL6WH.png)
 
 A modern web application for creating voice-acted scripts with multiple actors. Perfect for storytelling, dialogue writing, voiceovers, and animated character interactions.
 
@@ -26,7 +25,7 @@ A modern web application for creating voice-acted scripts with multiple actors. 
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/voice-script-generator.git
+   git clone https://github.com/haple/voice-script-generator.git
    cd voice-script-generator
    ```
 
@@ -90,12 +89,6 @@ The application is built with:
 - `/lib` - Utility functions and libraries
 - `/public` - Static assets
 
-## 📄 License
+## 🙏 Like this project? Follow me for more <3
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgements
-
-- [ElevenLabs](https://elevenlabs.io/) for the AI voice technology
-- [Next.js](https://nextjs.org/) for the React framework
-- [React Beautiful DND](https://github.com/atlassian/react-beautiful-dnd) for drag-and-drop functionality
+- LinkedIn: [Aleph Santos Oliveira](https://www.linkedin.com/in/aleph-santos-oliveira/)
