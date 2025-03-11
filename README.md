@@ -1,3 +1,4 @@
+# Copie com alegria 💙
 
 # 🎭 Gerador de Roteiros com Voz
 
@@ -9,7 +10,7 @@ Uma aplicação web moderna para criar roteiros com múltiplos atores e vozes. P
 - 🗣️ Gere narrações realistas usando vozes de IA da ElevenLabs
 - 👥 Personalize atores com nomes, avatares de emoji e vozes
 - 🎵 Reproduza linhas individuais ou o roteiro inteiro em sequência
-- ✏️ Edite e regenere linhas específicas a qualquer momento
+- ✏️ Edite e recrie linhas específicas a qualquer momento
 - 🔄 Interface de arrastar e soltar para reorganizar as linhas de diálogo
 
 ## 🚀 Começando
@@ -24,7 +25,7 @@ Uma aplicação web moderna para criar roteiros com múltiplos atores e vozes. P
 1. **Clone o repositório**
 
    ```bash
-   git clone https://github.com/yourusername/voice-script-generator.git
+   git clone https://github.com/haple/voice-script-generator.git
    cd voice-script-generator
    ```
 
@@ -42,7 +43,7 @@ Uma aplicação web moderna para criar roteiros com múltiplos atores e vozes. P
    ELEVENLABS_API_KEY=sua_chave_api_elevenlabs_aqui
    ```
 
-4. **Execute o servidor de desenvolvimento**
+4. **Seja feliz**
 
    ```bash
    npm run dev
