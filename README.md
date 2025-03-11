@@ -89,10 +89,6 @@ A aplicação é construída com:
 - `/lib` - Funções utilitárias e bibliotecas
 - `/public` - Recursos estáticos
 
-## 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
-
 ## 🙏 Agradecimentos
 
 - [ElevenLabs](https://elevenlabs.io/) pela tecnologia de voz com IA
