@@ -1,0 +1,821 @@
+
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #222, #111);
+  color: #fff;
+}
+
+.main {
+  padding: 3rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.15;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleHighlight {
+  background: linear-gradient(90deg, #7928CA, #FF0080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+  font-size: 3.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #aaa;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+.toolbox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.actorsSection {
+  width: 100%;
+}
+
+.actorsSection h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #ddd;
+}
+
+.actorsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.actorCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.actorCard:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.actorEmoji {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.actorName {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.addActorButton {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  cursor: pointer;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+.addActorButton span {
+  font-size: 2rem;
+  color: #aaa;
+}
+
+.addActorButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.scriptControls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.controlButton {
+  background: linear-gradient(90deg, #7928CA, #FF0080);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  min-width: 150px;
+}
+
+.controlButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.controlButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.endScriptControls {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.scriptContainer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.scriptContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #7928CA, #FF0080);
+}
+
+.emptyScript {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  color: #aaa;
+  font-style: italic;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.emptyScript p {
+  margin-bottom: 1rem;
+}
+
+.scriptLines {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  margin: 1.5rem 0;
+}
+
+.scriptLine {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.2rem;
+  border-left: 4px solid transparent;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.scriptLine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, transparent 70%, rgba(255, 255, 255, 0.03) 100%);
+  border-radius: 0 0 0 12px;
+  z-index: 0;
+}
+
+.scriptLine:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.activeLine {
+  background: rgba(255, 255, 255, 0.12);
+  border-left: 4px solid #FF0080;
+  animation: pulseBorder 1.5s infinite;
+  box-shadow: 0 4px 15px rgba(255, 0, 128, 0.15);
+}
+
+@keyframes pulseBorder {
+  0% { border-left-color: #FF0080; box-shadow: 0 4px 15px rgba(255, 0, 128, 0.15); }
+  50% { border-left-color: #7928CA; box-shadow: 0 4px 15px rgba(121, 40, 202, 0.15); }
+  100% { border-left-color: #FF0080; box-shadow: 0 4px 15px rgba(255, 0, 128, 0.15); }
+}
+
+.dragging {
+  background: rgba(121, 40, 202, 0.15);
+  border: 2px dashed #7928CA;
+  transform: rotate(1deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.lineHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.dragHandle {
+  cursor: grab;
+  color: #888;
+  font-size: 1.2rem;
+  padding: 0.3rem 0.5rem;
+  transition: all 0.2s ease;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  line-height: 1;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.dragHandle:hover {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.actorSelect {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.6rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  flex-grow: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.menuButton.active {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.actorSelect:hover, .actorSelect:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.lineMenu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.menuButton {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.menuButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.menuDropdown {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  background: #222;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  min-width: 140px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  pointer-events: auto !important;
+}
+
+.menuButton:hover .menuDropdown,
+.menuButton:focus .menuDropdown,
+.menuButton.active .menuDropdown,
+.menuDropdown:hover,
+.menuDropdown:focus{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menuItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menuItem svg {
+  flex-shrink: 0;
+}
+
+.deleteMenuItem {
+  color: #ff6b6b;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.deleteMenuItem:hover {
+  background: rgba(255, 107, 107, 0.1);
+}
+
+.menuItem:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.lineControls {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.playButton, .deleteButton, .regenerateButton {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+}
+
+.playButton {
+  color: #4CAF50;
+}
+
+.regenerateButton {
+  color: #3498db;
+}
+
+.deleteButton {
+  color: #ff6b6b;
+}
+
+.playButton:hover:not(:disabled) {
+  background: rgba(76, 175, 80, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.regenerateButton:hover:not(:disabled) {
+  background: rgba(52, 152, 219, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+.deleteButton:hover:not(:disabled) {
+  background: rgba(255, 107, 107, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+}
+
+.playButton:disabled, .deleteButton:disabled, .regenerateButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.lineContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.addLineButtonContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 24px;
+  z-index: 2;
+}
+
+.addLineButton {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  transition: all 0.2s ease;
+  opacity: 0;
+}
+
+.lineContainer:hover .addLineButton,
+:global(.show-buttons) .addLineButton {
+  opacity: 1;
+}
+
+.addLineButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.2);
+  color: white;
+}
+
+.lineTextarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.2rem;
+  color: #fff;
+  font-size: 1.1rem;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.6;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* position: relative; */
+  z-index: 1;
+  min-height: 80px;
+}
+
+.lineTextarea:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 0, 128, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 0, 128, 0.2);
+  outline: none;
+}
+
+.lineTextarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.modifiedLine .lineTextarea {
+  border-color: rgba(52, 152, 219, 0.4);
+  background-color: rgba(52, 152, 219, 0.05);
+}
+
+.processingLine .lineTextarea {
+  border-color: rgba(241, 196, 15, 0.4);
+  background-color: rgba(241, 196, 15, 0.05);
+}
+
+.processingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  backdrop-filter: blur(2px);
+  z-index: 2;
+  pointer-events: none; /* Allow clicking through the overlay */
+}
+
+.processingSpinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #FF0080;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.floatingPlayButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7928CA, #FF0080);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(255, 0, 128, 0.4);
+  z-index: 100;
+}
+
+.floatingPlayButton:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 0, 128, 0.6);
+}
+
+.characterCount {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.characterCount.limit {
+  color: #ff6b6b;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal h2 {
+  margin-bottom: 1.5rem;
+  color: #fff;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ddd;
+}
+
+.input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 0.8rem;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.saveButton {
+  background: linear-gradient(90deg, #7928CA, #FF0080);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.saveButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.deleteActorButton {
+  background: rgba(255, 60, 60, 0.2);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 60, 60, 0.3);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.deleteActorButton:hover {
+  background: rgba(255, 60, 60, 0.3);
+  transform: translateY(-2px);
+}
+
+.hiddenAudio {
+  display: none;
+}
+
+.errorMessage {
+  background: rgba(255, 60, 60, 0.2);
+  border: 1px solid rgba(255, 60, 60, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.errorMessage p {
+  color: #ff6b6b;
+  margin: 0;
+}
+
+.errorMessage button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.voiceSelection {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.previewButton {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.previewButton:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.previewButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.previewLoading {
+  background: linear-gradient(-45deg, rgba(121, 40, 202, 0.5), rgba(255, 0, 128, 0.5));
+  background-size: 200% 200%;
+  animation: gradientBg 1.5s ease infinite;
+}
+
+@keyframes gradientBg {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .titleHighlight {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .toolbox, .scriptContainer {
+    padding: 1rem;
+  }
+  
+  .controlButton {
+    width: 100%;
+  }
+  
+  .actorCard {
+    min-width: 80px;
+  }
+  
+  .actorsList {
+    justify-content: center;
+  }
+  
+  .lineHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .actorSelect {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .lineControls {
+    align-self: flex-end;
+  }
+  
+  .modal {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  
+  .voiceSelection {
+    flex-direction: column;
+  }
+}
